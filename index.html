@@ -1,0 +1,2022 @@
+    <!doctype html>
+    <html ng-app>
+    <head>
+
+<meta charset=utf-8 />
+    <script src="http://code.angularjs.org/1.0.6/angular.min.js"></script>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/script.js" > </script>
+    </head>
+
+    <body>
+    <div ng-init =  "devices = [
+    {
+        installId: 1,
+        vendor: 'RI'  ,
+        name: 'LN-SO2'  ,
+        serialNumber: '44'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 1,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 2,
+        vendor: 'RI'  ,
+        name: 'LN-SO3'  ,
+        serialNumber: '43'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 2,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 3,
+        vendor: 'RI'  ,
+        name: 'LN-SO4'  ,
+        serialNumber: '45'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 3,
+        typeDescription: 'solenoid accelerator for linac'  
+    
+   },{
+        installId: 4,
+        vendor: 'RI'  ,
+        name: 'LN-SO5'  ,
+        serialNumber: '53'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 4,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 5,
+        vendor: 'RI'  ,
+        name: 'LN-SO6'  ,
+        serialNumber: '55'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 5,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 6,
+        vendor: 'RI'  ,
+        name: 'LN-SO7'  ,
+        serialNumber: '60'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 6,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 7,
+        vendor: 'RI'  ,
+        name: 'LN-SO8'  ,
+        serialNumber: '62'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 7,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 8,
+        vendor: 'RI'  ,
+        name: 'LN-SO9'  ,
+        serialNumber: '50'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 8,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 9,
+        vendor: 'RI'  ,
+        name: 'LN-SO10'  ,
+        serialNumber: '51'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 9,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 10,
+        vendor: 'RI'  ,
+        name: 'LN-SO11'  ,
+        serialNumber: '59'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 10,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 11,
+        vendor: 'RI'  ,
+        name: 'LN-SO12'  ,
+        serialNumber: '46'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 11,
+        typeDescription: 'solenoid accelerator for linac'  
+    },  {
+        installId: 12,
+        vendor: 'RI'  ,
+        name: 'LN-SO13'  ,
+        serialNumber: '48'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 12,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 13,
+        vendor: 'RI'  ,
+        name: 'LN-SO14'  ,
+        serialNumber: '49'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 13,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 14,
+        vendor: 'RI'  ,
+        name: 'LN-SO15'  ,
+        serialNumber: '4'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 14,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 15,
+        vendor: 'RI'  ,
+        name: 'LN-SO16'  ,
+        serialNumber: '5'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 15,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 16,
+        vendor: 'RI'  ,
+        name: 'LN-SO17'  ,
+        serialNumber: '47'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 16,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 17,
+        vendor: 'RI'  ,
+        name: 'LN-SO18'  ,
+        serialNumber: '58'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 17,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 18,
+        vendor: 'RI'  ,
+        name: 'LN-SO19'  ,
+        serialNumber: '57'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 18,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 19,
+        vendor: 'RI'  ,
+        name: 'LN-SO20'  ,
+        serialNumber: '56'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Solenoid'  ,
+        inventoryId: 19,
+        typeDescription: 'solenoid accelerator for linac'  
+    },
+    {
+        installId: 20,
+        vendor: 'RI'  ,
+        name: 'LN-Q1'  ,
+        serialNumber: '1'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Quadrupole'  ,
+        inventoryId: 20,
+        typeDescription: 'quadrupole magnet for linac'  
+    },
+    {
+        installId: 21,
+        vendor: 'RI'  ,
+        name: 'LN-Q2'  ,
+        serialNumber: '2'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Quadrupole'  ,
+        inventoryId: 21,
+        typeDescription: 'quadrupole magnet for linac'  
+    },
+    {
+        installId: 22,
+        vendor: 'RI'  ,
+        name: 'LN-Q3'  ,
+        serialNumber: '3'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Quadrupole'  ,
+        inventoryId: 22,
+        typeDescription: 'quadrupole magnet for linac'  
+    },
+    {
+        installId: 23,
+        vendor: 'RI'  ,
+        name: 'LN-Q4'  ,
+        serialNumber: '4'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Quadrupole'  ,
+        inventoryId: 23,
+        typeDescription: 'quadrupole magnet for linac'  
+    },
+    {
+        installId: 24,
+        vendor: 'RI'  ,
+        name: 'LN-Q5'  ,
+        serialNumber: '5'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Quadrupole'  ,
+        inventoryId: 24,
+        typeDescription: 'quadrupole magnet for linac'  
+    },
+    {
+        installId: 25,
+        vendor: 'RI'  ,
+        name: 'LN-Q6'  ,
+        serialNumber: '6'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Quadrupole'  ,
+        inventoryId: 25,
+        typeDescription: 'quadrupole magnet for linac'  
+    },
+    {
+        installId: 26,
+        vendor: 'RI'  ,
+        name: 'LN-Q7'  ,
+        serialNumber: '7'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Quadrupole'  ,
+        inventoryId: 26,
+        typeDescription: 'quadrupole magnet for linac'  
+    },
+    {
+        installId: 27,
+        vendor: 'RI'  ,
+        name: 'LN-Q8'  ,
+        serialNumber: '8'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Quadrupole'  ,
+        inventoryId: 27,
+        typeDescription: 'quadrupole magnet for linac'  
+    },
+    {
+        installId: 28,
+        vendor: 'RI'  ,
+        name: 'LN-Q9'  ,
+        serialNumber: '9'  ,
+        system: 'Linac'  ,
+        componentType: 'LN Quadrupole'  ,
+        inventoryId: 28,
+        typeDescription: 'quadrupole magnet for linac'  
+    },
+    {
+        installId: 29,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-B1'  ,
+        serialNumber: '3'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Dipole'  ,
+        inventoryId: 29,
+        typeDescription: 'dipole magnet for linac to booster transport line'  
+    },
+    {
+        installId: 30,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-B2'  ,
+        serialNumber: '2'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Dipole'  ,
+        inventoryId: 30,
+        typeDescription: 'dipole magnet for linac to booster transport line'  
+    },
+    {
+        installId: 31,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-B3'  ,
+        serialNumber: '1'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Dipole'  ,
+        inventoryId: 31,
+        typeDescription: 'dipole magnet for linac to booster transport line'  
+    },
+    {
+        installId: 32,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-B4'  ,
+        serialNumber: '4'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Dipole'  ,
+        inventoryId: 32,
+        typeDescription: 'dipole magnet for linac to booster transport line'  
+    },
+    {
+        installId: 33,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q5'  ,
+        serialNumber: '2'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 1340'  ,
+        inventoryId: 33,
+        typeDescription: 'quadrupole magnet with 134mm aperture.'  
+    },
+    {
+        installId: 34,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q6'  ,
+        serialNumber: '1'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 1340'  ,
+        inventoryId: 34,
+        typeDescription: 'quadrupole magnet with 134mm aperture.'  
+    },
+    {
+        installId: 35,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q1'  ,
+        serialNumber: '1'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 35,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 36,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q2'  ,
+        serialNumber: '2'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 36,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 37,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q3'  ,
+        serialNumber: '6'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 37,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 38,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q4'  ,
+        serialNumber: '5'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 38,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 39,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q7'  ,
+        serialNumber: '4'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 39,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },{
+        installId: 40,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q8'  ,
+        serialNumber: '9'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 40,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 41,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q9'  ,
+        serialNumber: '13'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 41,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 42,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q10'  ,
+        serialNumber: '8'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 42,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 43,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q11'  ,
+        serialNumber: '10'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 43,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 44,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q12'  ,
+        serialNumber: '11'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 44,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 45,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q13'  ,
+        serialNumber: '12'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 45,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 46,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q14'  ,
+        serialNumber: '14'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 46,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 47,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q15'  ,
+        serialNumber: '15'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 47,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 48,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q1BD1'  ,
+        serialNumber: '7'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 48,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 49,
+        vendor: 'Stangenes, USA'  ,
+        name: 'LB-Q2BD1'  ,
+        serialNumber: '3'  ,
+        system: 'LBT'  ,
+        componentType: 'LBT Quadrupole 5200'  ,
+        inventoryId: 49,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 50,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BD1'  ,
+        serialNumber: '24'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 50,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 51,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BD2'  ,
+        serialNumber: '4'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 51,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 52,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BD3'  ,
+        serialNumber: '5'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 52,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 53,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BD4'  ,
+        serialNumber: '6'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 53,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 54,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BD5'  ,
+        serialNumber: '25'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 54,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 55,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BD6'  ,
+        serialNumber: '11'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 55,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 56,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BD7'  ,
+        serialNumber: '12'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 56,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 57,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BD8'  ,
+        serialNumber: '22'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 57,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 58,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BD1'  ,
+        serialNumber: '2'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 58,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 59,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BD2'  ,
+        serialNumber: '16'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 59,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 60,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BD3'  ,
+        serialNumber: '10'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 60,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 61,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BD4'  ,
+        serialNumber: '18'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 61,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 62,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BD5'  ,
+        serialNumber: '15'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 62,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 63,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BD6'  ,
+        serialNumber: '23'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 63,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 64,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BD7'  ,
+        serialNumber: '33'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 64,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 65,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BD8'  ,
+        serialNumber: '28'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD1'  ,
+        inventoryId: 65,
+        typeDescription: 'Dipole type BD1 for booster ring'  
+    },
+    {
+        installId: 66,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BD1'  ,
+        serialNumber: '32'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 66,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 67,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BD2'  ,
+        serialNumber: '26'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 67,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 68,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BD3'  ,
+        serialNumber: '17'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 68,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 69,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BD4'  ,
+        serialNumber: '8'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 69,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 70,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BD5'  ,
+        serialNumber: '29'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 70,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 71,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BD6'  ,
+        serialNumber: '34'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 71,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 72,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BD7'  ,
+        serialNumber: '3'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 72,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 73,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BD8'  ,
+        serialNumber: '21'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 73,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 74,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BD1'  ,
+        serialNumber: '31'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 74,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 75,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BD2'  ,
+        serialNumber: '7'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 75,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 76,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BD3'  ,
+        serialNumber: '14'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 76,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 77,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BD4'  ,
+        serialNumber: '13'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 77,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 78,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BD5'  ,
+        serialNumber: '19'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 78,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 79,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BD6'  ,
+        serialNumber: '9'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 79,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 80,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BD7'  ,
+        serialNumber: '30'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 80,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 81,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BD8'  ,
+        serialNumber: '20'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BD2'  ,
+        inventoryId: 81,
+        typeDescription: 'Dipole type BD2 for booster ring'  
+    },
+    {
+        installId: 82,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BF1'  ,
+        serialNumber: '26'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 82,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 83,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BF2'  ,
+        serialNumber: '6'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 83,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 84,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BF3'  ,
+        serialNumber: '9'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 84,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 85,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BF4'  ,
+        serialNumber: '12'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 85,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 86,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BF5'  ,
+        serialNumber: '25'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 86,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 87,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BF6'  ,
+        serialNumber: '8'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 87,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 88,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1BF7'  ,
+        serialNumber: '13'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 88,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 89,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BF1'  ,
+        serialNumber: '16'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 89,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 90,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BF2'  ,
+        serialNumber: '18'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 90,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 91,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BF3'  ,
+        serialNumber: '7'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 91,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 92,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BF4'  ,
+        serialNumber: '24'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 92,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 93,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BF5'  ,
+        serialNumber: '10'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 93,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 94,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BF6'  ,
+        serialNumber: '4'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 94,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 95,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2BF7'  ,
+        serialNumber: '2'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 95,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 96,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BF1'  ,
+        serialNumber: '29'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 96,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 97,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BF2'  ,
+        serialNumber: '15'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 97,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 98,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BF3'  ,
+        serialNumber: '14'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 98,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 99,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BF4'  ,
+        serialNumber: '20'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 99,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 100,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BF5'  ,
+        serialNumber: '21'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 100,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 101,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BF6'  ,
+        serialNumber: '11'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 101,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 102,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3BF7'  ,
+        serialNumber: '3'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 102,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 103,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BF1'  ,
+        serialNumber: '22'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 103,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 104,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BF2'  ,
+        serialNumber: '5'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 104,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 105,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BF3'  ,
+        serialNumber: '19'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 105,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 106,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BF4'  ,
+        serialNumber: '17'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 106,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 107,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BF5'  ,
+        serialNumber: '27'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 107,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 108,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BF6'  ,
+        serialNumber: '30'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 108,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 109,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4BF7'  ,
+        serialNumber: '23'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Dipole BF'  ,
+        inventoryId: 109,
+        typeDescription: 'Dipole type BF for booster ring'  
+    },
+    {
+        installId: 110,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1QF1'  ,
+        serialNumber: '1'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QF'  ,
+        inventoryId: 110,
+        typeDescription: 'Quadrupole type QF for booster ring'  
+    },
+    {
+        installId: 111,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1QF2'  ,
+        serialNumber: '2'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QF'  ,
+        inventoryId: 111,
+        typeDescription: 'Quadrupole type QF for booster ring'  
+    },
+    {
+        installId: 112,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2QF1'  ,
+        serialNumber: '3'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QF'  ,
+        inventoryId: 112,
+        typeDescription: 'Quadrupole type QF for booster ring'  
+    },
+    {
+        installId: 113,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2QF2'  ,
+        serialNumber: '4'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QF'  ,
+        inventoryId: 113,
+        typeDescription: 'Quadrupole type QF for booster ring'  
+    },
+    {
+        installId: 114,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3QF1'  ,
+        serialNumber: '5'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QF'  ,
+        inventoryId: 114,
+        typeDescription: 'Quadrupole type QF for booster ring'  
+    },
+    {
+        installId: 115,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3QF2'  ,
+        serialNumber: '6'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QF'  ,
+        inventoryId: 115,
+        typeDescription: 'Quadrupole type QF for booster ring'  
+    },
+    {
+        installId: 116,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4QF1'  ,
+        serialNumber: '7'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QF'  ,
+        inventoryId: 116,
+        typeDescription: 'Quadrupole type QF for booster ring'  
+    },
+    {
+        installId: 117,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4QF2'  ,
+        serialNumber: '8'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QF'  ,
+        inventoryId: 117,
+        typeDescription: 'Quadrupole type QF for booster ring'  
+    },
+    {
+        installId: 118,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1QD1'  ,
+        serialNumber: '1'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QD'  ,
+        inventoryId: 118,
+        typeDescription: 'Quadrupole type QD for booster ring'  
+    },
+    {
+        installId: 119,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1QD2'  ,
+        serialNumber: '2'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QD'  ,
+        inventoryId: 119,
+        typeDescription: 'Quadrupole type QD for booster ring'  
+    },
+    {
+        installId: 120,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2QD1'  ,
+        serialNumber: '3'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QD'  ,
+        inventoryId: 120,
+        typeDescription: 'Quadrupole type QD for booster ring'  
+    },
+    {
+        installId: 121,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2QD2'  ,
+        serialNumber: '4'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QD'  ,
+        inventoryId: 121,
+        typeDescription: 'Quadrupole type QD for booster ring'  
+    },
+    {
+        installId: 122,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3QD1'  ,
+        serialNumber: '5'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QD'  ,
+        inventoryId: 122,
+        typeDescription: 'Quadrupole type QD for booster ring'  
+    },
+    {
+        installId: 123,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3QD2'  ,
+        serialNumber: '6'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QD'  ,
+        inventoryId: 123,
+        typeDescription: 'Quadrupole type QD for booster ring'  
+    },
+    {
+        installId: 124,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4QD1'  ,
+        serialNumber: '7'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QD'  ,
+        inventoryId: 124,
+        typeDescription: 'Quadrupole type QD for booster ring'  
+    },
+    {
+        installId: 125,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4QD2'  ,
+        serialNumber: '8'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QD'  ,
+        inventoryId: 125,
+        typeDescription: 'Quadrupole type QD for booster ring'  
+    },
+    {
+        installId: 126,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1QG1'  ,
+        serialNumber: '1'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QG'  ,
+        inventoryId: 126,
+        typeDescription: 'Quadrupole type QG for booster ring'  
+    },
+    {
+        installId: 127,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1QG2'  ,
+        serialNumber: '2'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QG'  ,
+        inventoryId: 127,
+        typeDescription: 'Quadrupole type QG for booster ring'  
+    },
+    {
+        installId: 128,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2QG1'  ,
+        serialNumber: '3'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QG'  ,
+        inventoryId: 128,
+        typeDescription: 'Quadrupole type QG for booster ring'  
+    },
+    {
+        installId: 129,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2QG2'  ,
+        serialNumber: '4'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QG'  ,
+        inventoryId: 129,
+        typeDescription: 'Quadrupole type QG for booster ring'  
+    },
+    {
+        installId: 130,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3QG1'  ,
+        serialNumber: '5'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QG'  ,
+        inventoryId: 130,
+        typeDescription: 'Quadrupole type QG for booster ring'  
+    },
+    {
+        installId: 131,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3QG2'  ,
+        serialNumber: '6'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QG'  ,
+        inventoryId: 131,
+        typeDescription: 'Quadrupole type QG for booster ring'  
+    },
+    {
+        installId: 132,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4QG1'  ,
+        serialNumber: '7'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QG'  ,
+        inventoryId: 132,
+        typeDescription: 'Quadrupole type QG for booster ring'  
+    },
+    {
+        installId: 133,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4QG2'  ,
+        serialNumber: '8'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Quadrupole QG'  ,
+        inventoryId: 133,
+        typeDescription: 'Quadrupole type QG for booster ring'  
+    },
+    {
+        installId: 134,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1SF1'  ,
+        serialNumber: '1'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SF'  ,
+        inventoryId: 134,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 135,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1SF2'  ,
+        serialNumber: '2'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SF'  ,
+        inventoryId: 135,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 136,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2SF1'  ,
+        serialNumber: '3'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SF'  ,
+        inventoryId: 136,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 137,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2SF2'  ,
+        serialNumber: '4'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SF'  ,
+        inventoryId: 137,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 138,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3SF1'  ,
+        serialNumber: '5'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SF'  ,
+        inventoryId: 138,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 139,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3SF2'  ,
+        serialNumber: '6'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SF'  ,
+        inventoryId: 139,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 140,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4SF1'  ,
+        serialNumber: '7'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SF'  ,
+        inventoryId: 140,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 141,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4SF2'  ,
+        serialNumber: '8'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SF'  ,
+        inventoryId: 141,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 142,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1SD1'  ,
+        serialNumber: '1'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SD'  ,
+        inventoryId: 142,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 143,
+        vendor: 'BINP, Russia'  ,
+        name: 'A1SD2'  ,
+        serialNumber: '2'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SD'  ,
+        inventoryId: 143,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 144,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2SD1'  ,
+        serialNumber: '3'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SD'  ,
+        inventoryId: 144,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 145,
+        vendor: 'BINP, Russia'  ,
+        name: 'A2SD2'  ,
+        serialNumber: '4'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SD'  ,
+        inventoryId: 145,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 146,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3SD1'  ,
+        serialNumber: '5'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SD'  ,
+        inventoryId: 146,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 147,
+        vendor: 'BINP, Russia'  ,
+        name: 'A3SD2'  ,
+        serialNumber: '6'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SD'  ,
+        inventoryId: 147,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 148,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4SD1'  ,
+        serialNumber: '7'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SD'  ,
+        inventoryId: 148,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 149,
+        vendor: 'BINP, Russia'  ,
+        name: 'A4SD2'  ,
+        serialNumber: '8'  ,
+        system: 'Booster'  ,
+        componentType: 'BS Sextupole SD'  ,
+        inventoryId: 149,
+        typeDescription: 'Sextupole type SF for booster ring'  
+    },
+    {
+        installId: 150,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-B1'  ,
+        serialNumber: '2'  ,
+        system: 'BST'  ,
+        componentType: 'BST Dipole'  ,
+        inventoryId: 150,
+        typeDescription: 'dipole magnet for linac to booster transport line'  
+    },
+    {
+        installId: 151,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-B2'  ,
+        serialNumber: '1'  ,
+        system: 'BST'  ,
+        componentType: 'BST Dipole'  ,
+        inventoryId: 151,
+        typeDescription: 'dipole magnet for linac to booster transport line'  
+    },
+    {
+        installId: 152,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-B3'  ,
+        serialNumber: '3'  ,
+        system: 'BST'  ,
+        componentType: 'BST Dipole'  ,
+        inventoryId: 152,
+        typeDescription: 'dipole magnet for linac to booster transport line'  
+    },
+    {
+        installId: 153,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-B4'  ,
+        serialNumber: '4'  ,
+        system: 'BST'  ,
+        componentType: 'BST Dipole'  ,
+        inventoryId: 153,
+        typeDescription: 'dipole magnet for linac to booster transport line'  
+    },
+    {
+        installId: 154,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q1'  ,
+        serialNumber: '1'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 154,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 155,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q2'  ,
+        serialNumber: '2'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 155,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 156,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q3'  ,
+        serialNumber: '3'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 156,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 157,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q4'  ,
+        serialNumber: '4'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 157,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 158,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q5'  ,
+        serialNumber: '5'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 158,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 159,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q6'  ,
+        serialNumber: '6'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 159,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 160,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q7'  ,
+        serialNumber: '7'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 160,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 161,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q8'  ,
+        serialNumber: '10'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 161,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 162,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q9'  ,
+        serialNumber: '11'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 162,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 163,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q10'  ,
+        serialNumber: '12'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 163,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 164,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q11'  ,
+        serialNumber: '13'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 164,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 165,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q12'  ,
+        serialNumber: '14'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 165,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 166,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q13'  ,
+        serialNumber: '15'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 166,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 167,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q14'  ,
+        serialNumber: '16'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 167,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 168,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q1BD1'  ,
+        serialNumber: '8'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 168,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },
+    {
+        installId: 169,
+        vendor: 'Stangenes, USA'  ,
+        name: 'BS-Q2BD1'  ,
+        serialNumber: '9'  ,
+        system: 'BST'  ,
+        componentType: 'BST Quadrupole 5200'  ,
+        inventoryId: 169,
+        typeDescription: 'quadrupole magnet with 52mm aperture'  
+    },{
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '1',
+        system: null,
+        componentType:  'Corr C',
+        inventoryId: 170,
+        typeDescription:  '100mm CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '2',
+        system: null,
+        componentType:  'Corr C',
+        inventoryId: 171,
+        typeDescription:  '100mm CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '3',
+        system: null,
+        componentType:  'Corr C',
+        inventoryId: 172,
+        typeDescription:  '100mm CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '4',
+        system: null,
+        componentType:  'Corr C',
+        inventoryId: 173,
+        typeDescription:  '100mm CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '6',
+        system: null,
+        componentType:  'Corr C',
+        inventoryId: 174,
+        typeDescription:  '100mm CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '9',
+        system: null,
+        componentType:  'Corr C',
+        inventoryId: 175,
+        typeDescription:  '100mm CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '12',
+        system: null,
+        componentType:  'Corr C',
+        inventoryId: 176,
+        typeDescription:  '100mm CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '13',
+        system: null,
+        componentType:  'Corr C',
+        inventoryId: 177,
+        typeDescription:  '100mm CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '31',
+        system: null,
+        componentType:  'Corr C',
+        inventoryId: 178,
+        typeDescription:  '100mm CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '1',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 179,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '2',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 180,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '3',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 181,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '4',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 182,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '5',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 183,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '6',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 184,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '7',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 185,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '8',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 186,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '9',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 187,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '10',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 188,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '11',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 189,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '12',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 190,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '13',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 191,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '14',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 192,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '15',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 193,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '16',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 194,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '17',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 195,
+        typeDescription: '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '18',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 196,
+        typeDescription:  '100mm SKEWED CORRECTOR'  
+    },
+    {
+        installId: null,
+        vendor: 'Everson-Tesla, USA',
+        name: null,
+        serialNumber: '19',
+        system: null,
+        componentType:  'Corr D',
+        inventoryId: 197,
+        typeDescription:  '100mm SKEWED CORRECTOR'  
+    }]">
+    <p>I have {{devices.length}} devices. They are:</p>
+
+ <div ng-init= "systems = ['Linac','LBT','B.R.','BST', 'S.R.','Booster','Storage Ring']">
+    <ul>
+    <select ng-model="query"  >
+     <option></option> 
+     <option ng-repeat = "system in systems"> {{system}}</option>
+    </select>
+    </ul>
+    </div>
+    <center>
+        <table class="table" ng-repeat = "device in devices | filter:query">
+            <tbody>
+        <tr>
+            <th>Vendor</th>
+            <th>serialNumber</th>
+            <th>System</th>
+            <th>componentType</th>
+            <th>inventoryId</th>
+            <th>typeDescription</th>
+            <th>InstallId</th>
+        </tr>
+        <tr>
+         <td>{{device.vendor}}</td>
+         <td>{{device.serialNumber}}</td>
+         <td>{{device.system}}</td>
+         <td>{{device.componentType}}</td>
+         <td>{{device.inventoryId}}</td>
+         <td>{{device.typeDescription}}</td>
+        <td>{{device.installId}}</td>
+       </tr>
+           </tbody> 
+            </table>
+        
+        </center>
+
+   
+  <div ng-view></div> 
+    </body>
+    </html>
+
+    
